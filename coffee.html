@@ -55,21 +55,23 @@
     console.log(myRevenueMessage);
 
     
-
+    myImage.addEventListener('click', coffeeWait);
     function coffeeWait(){
         myImage.setAttribute('src', 'static/coffee_machine.jpg');
-        
+        setTimeout(makeCoffee, 2500);
     }
-    myImage.addEventListener('click', coffeeWait);
-    setTimeout(makeCoffee, 1000);
- 
 
     var makeCoffee = function() {
         myImage.setAttribute('src', 'static/coffee_mug.jpg');
+        setTimeout(originalCoffee, 1500);
     }
     // myImage.addEventListener('click', makeCoffee);
+    var originalCoffee = function(){
+        myImage.setAttribute('src','static/coffee_beans.jpg');
+    }
 
-    
+    setTimeout(originalCoffee, 1500);
+
 
     // use this JavaScript object in further study step
 
